@@ -1,0 +1,14 @@
+<div class="main">
+
+    <sub style="text-align: left;"><a href="{% url 'list_view' %}" style="text-decoration: none; color: blue; padding:2%; cursor:pointer; margin-right:2%;">don't have account,</a></sub>
+
+
+	{% for user in User %}.
+
+	{{ user.username }}<br/>
+	{{ user.email }}<br/>
+	<hr/>
+
+	{% endfor %}
+
+</div>

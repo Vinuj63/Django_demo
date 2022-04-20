@@ -1,0 +1,6 @@
+<form method="POST">
+    <sub style="text-align: left;"><a href="{% url 'home_view' %}" style="text-decoration: none; color: blue; padding:2%; cursor:pointer; margin-right:2%;">don't have account,</a></sub>
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Submit">
+</form>

@@ -1,0 +1,9 @@
+<div class="main">
+
+    <sub style="text-align: left;"><a href="{% url 'detail_view' user.id %}" style="text-decoration: none; color: blue; padding:2%; cursor:pointer; margin-right:2%;">don't have account,</a></sub>
+	
+	<!-- Specify fields to be displayed -->
+	{{ user.username }}<br/>
+	{{ user.email }}<br/>
+
+</div>

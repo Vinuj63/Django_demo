@@ -1,0 +1,18 @@
+{% comment %} <form method="POST" novalidate>
+    <sub style="text-align: left;"><a href="{% url 'data_view' %}" style="text-decoration: none; color: blue; padding:2%; cursor:pointer; margin-right:2%;">don't have account,</a></sub>
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Submit">
+</form> {% endcomment %}
+
+<form action="" method="POST" enctype="multipart/form-data" novalidate>
+	{% csrf_token %}
+	{% for fm in form %}
+	<div class="form-group">
+		{{fm.label_tag}} 
+		<br > {{fm}} 
+	</div>
+	{% endfor %}
+	<br>
+	<input type="submit" class="btn btn-primary" value="Submit">
+</form>
